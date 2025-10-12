@@ -5,6 +5,8 @@ description = "A collection of software patterns implemented in Python, includin
 
 [dependency-groups]
 dev = [
+    "faker>=37.11.0",
+    "pytest>=8.4.2",
     "rich>=14.2.0",
 ]
 
