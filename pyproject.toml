@@ -1,0 +1,13 @@
+[project]
+name = "software-patterns-in-python"
+version = "0.1.0"
+description = "A collection of software patterns implemented in Python, including (but not limited to) data structures, algorithms, and design patterns."
+
+[dependency-groups]
+dev = [
+    "rich>=14.2.0",
+]
+
+all = [
+    { include-group = 'dev'}
+]
