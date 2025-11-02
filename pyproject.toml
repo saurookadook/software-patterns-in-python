@@ -2,9 +2,7 @@
 name = "software-patterns-in-python"
 version = "0.1.0"
 description = "A collection of software patterns implemented in Python, including (but not limited to) data structures, algorithms, and design patterns."
-authors = [
-    { name = "Andy Maskiell", email = "maskiella@gmail.com"}
-]
+authors = [{ name = "Andy Maskiell", email = "maskiella@gmail.com" }]
 license = "MIT"
 license-files = ["LICENSE"]
 requires-python = ">=3.12"
@@ -16,18 +14,32 @@ Homepage = "https://github.com/saurookadook/software-patterns-in-python"
 dev = [
     "faker>=37.11.0",
     "pytest>=8.4.2",
+    "pytest-mock>=3.14.0,<4.0.0",
+    "pytest-sugar>=1.0.0,<2.0.0",
+    "pytest-xdist>=3.5.0,<4.0.0",
     "rich>=14.2.0",
 ]
 
-all = [
-    { include-group = 'dev'}
-]
+all = [{ include-group = 'dev' }]
 
 [tool.pytest.ini_options]
-filterwarnings = [
-    "ignore::DeprecationWarning",
+addopts = [
+    "-ra",
+    "--color=yes",
+    "--code-highlight=yes",
+    # "--cov=nlp_ssa",
+    # "--cov-report=term-missing",
 ]
-testpaths = ["tests"]
+
+filterwarnings = ["ignore::DeprecationWarning"]
+norecursedirs = ".*"
+python_files = ["test_*.py", "test.py"]
+required_plugins = [
+    "pytest-mock>=3.14.0,<4.0.0",
+    "pytest-sugar>=1.0.0,<2.0.0",
+    "pytest-xdist>=3.5.0,<4.0.0",
+]
+testpaths = ["__tests__"]
 # xfail_strict = true
 
 [tool.uv]

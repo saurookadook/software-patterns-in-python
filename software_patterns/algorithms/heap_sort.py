@@ -29,7 +29,8 @@ def heap_sort_in_place(iterable):
     rebuilding the heap until all elements are sorted.
 
     - **Time Complexity**: _**O(n log n)**_ - in all cases _(best, average, worst)_
-    - **Space Complexity**: _**O(1)**_ - in-place sorting algorithm
+    - **Space Complexity**: _**O(1)**_ - in-place sorting algorithm by removing elements from
+            the original iterable and pushing them into a new iterable.
 
     Args:
         iterable: An `iterable` collection of comparable elements _(e.g., `list`, `tuple`)_.

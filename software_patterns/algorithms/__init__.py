@@ -1,2 +1,4 @@
-from .heap_sort import heap_sort, heap_sort_in_place
-from .median_finder import MedianFinder
+from . import heap_sort
+from . import median_finder
+
+__all__ = ["heap_sort", "median_finder"]
