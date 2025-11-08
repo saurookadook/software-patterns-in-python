@@ -1,0 +1,60 @@
+from dataclasses import dataclass
+
+from ..constants import EngineTypes, SeatsMetadata
+
+
+@dataclass
+class CarConfig:
+    engine: EngineTypes
+    install_GPS: bool
+    install_trip_computer: bool
+    seats: int
+
+
+class Director:
+    """The director is only responsible for executing the building \
+    steps in a particular sequence. It's helpful when producing products \
+    according to a specific order or configuration. Strictly speaking, the \
+    director class is optional, since the client can control builders directly.
+
+    The director works with any builder instance that the client code passes \
+    to it. This way, the client code may alter the final type of the newly \
+    assembled product. The director can construct several product variations \
+    using the same building steps.
+    """
+
+    def construct_car_from_config(self, builder, config):
+        pass
+
+    def construct_basic_diesel_car(self, builder):
+        self.construct_car_from_config(
+            builder,
+            CarConfig(
+                engine=EngineTypes.DIESEL,
+                install_GPS=False,
+                install_trip_computer=False,
+                seats=SeatsMetadata.MIN_COUNT,
+            ),
+        )
+
+    def construct_basic_electric_car(self, builder):
+        self.construct_car_from_config(
+            builder,
+            CarConfig(
+                engine=EngineTypes.ELECTRIC,
+                install_GPS=True,
+                install_trip_computer=True,
+                seats=SeatsMetadata.STANDARD_COUNT,
+            ),
+        )
+
+    def construct_basic_gasoline_car(self, builder):
+        self.construct_car_from_config(
+            builder,
+            CarConfig(
+                engine=EngineTypes.GASOLINE,
+                install_GPS=True,
+                install_trip_computer=False,
+                seats=SeatsMetadata.MAX_COUNT,
+            ),
+        )
