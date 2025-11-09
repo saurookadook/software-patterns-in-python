@@ -1,4 +1,14 @@
-from ..constants import EngineTypes, SeatsMetadata
+from dataclasses import dataclass
+
+from ..constants import EngineType, SeatsMetadata
+
+
+@dataclass
+class CarConfig:
+    engine: EngineType
+    install_GPS: bool
+    install_trip_computer: bool
+    seats: int
 
 
 class Car:
@@ -9,7 +19,7 @@ class Car:
     """
 
     _GPS: bool = False
-    _engine: EngineTypes | None = None
+    _engine: EngineType | None = None
     _seats: int = 0
     _trip_computer: bool = False
 
@@ -19,7 +29,7 @@ class Car:
         return self._GPS
 
     @GPS.setter
-    def set_GPS(self, value: bool):
+    def GPS(self, value: bool):
         self._GPS = value
 
     @property
@@ -27,8 +37,8 @@ class Car:
         return self._engine
 
     @engine.setter
-    def set_engine(self, engine: EngineTypes):
-        if engine not in EngineTypes:
+    def engine(self, engine: EngineType):
+        if engine not in EngineType:
             raise ValueError(f"Invalid engine type: '{engine}'")
 
         self._engine = engine
@@ -38,18 +48,18 @@ class Car:
         return self._seats
 
     @seats.setter
-    def set_seats(self, seats: SeatsMetadata):
+    def seats(self, seats: int):
         if seats < SeatsMetadata.MIN_COUNT or seats > SeatsMetadata.MAX_COUNT:
             raise ValueError(
                 f"Invalid number of seats: '{seats}'. "
                 + f"Must be between {SeatsMetadata.MIN_COUNT} and {SeatsMetadata.MAX_COUNT}."
             )
-        self._seats = seats.value
+        self._seats = seats
 
     @property
     def trip_computer(self):
         return self._trip_computer
 
     @trip_computer.setter
-    def set_trip_computer(self, value: bool):
+    def trip_computer(self, value: bool):
         self._trip_computer = value

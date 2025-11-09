@@ -1,14 +1,5 @@
-from dataclasses import dataclass
-
-from ..constants import EngineTypes, SeatsMetadata
-
-
-@dataclass
-class CarConfig:
-    engine: EngineTypes
-    install_GPS: bool
-    install_trip_computer: bool
-    seats: int
+from ..constants import EngineType, SeatsMetadata
+from .car import CarConfig
 
 
 class Director:
@@ -30,7 +21,7 @@ class Director:
         self.construct_car_from_config(
             builder,
             CarConfig(
-                engine=EngineTypes.DIESEL,
+                engine=EngineType.DIESEL,
                 install_GPS=False,
                 install_trip_computer=False,
                 seats=SeatsMetadata.MIN_COUNT,
@@ -41,7 +32,7 @@ class Director:
         self.construct_car_from_config(
             builder,
             CarConfig(
-                engine=EngineTypes.ELECTRIC,
+                engine=EngineType.ELECTRIC,
                 install_GPS=True,
                 install_trip_computer=True,
                 seats=SeatsMetadata.STANDARD_COUNT,
@@ -52,7 +43,7 @@ class Director:
         self.construct_car_from_config(
             builder,
             CarConfig(
-                engine=EngineTypes.GASOLINE,
+                engine=EngineType.GASOLINE,
                 install_GPS=True,
                 install_trip_computer=False,
                 seats=SeatsMetadata.MAX_COUNT,

@@ -1,7 +1,7 @@
 from enum import IntEnum, StrEnum
 
 
-class EngineTypes(StrEnum):
+class EngineType(StrEnum):
     DIESEL = "Diesel"
     ELECTRIC = "Electric"
     GASOLINE = "Gasoline"

@@ -1,4 +1,4 @@
-from ..constants import EngineTypes, SeatsMetadata
+from ..constants import EngineType, SeatsMetadata
 
 
 class Manual:
@@ -10,7 +10,7 @@ class Manual:
     """
 
     _GPS: bool = False
-    _engine: EngineTypes | None = None
+    _engine: EngineType | None = None
     _seats: int = 0
     _trip_computer: bool = False
 
@@ -20,7 +20,7 @@ class Manual:
         return self._GPS
 
     @GPS.setter
-    def set_GPS(self, value: bool):
+    def GPS(self, value: bool):
         self._GPS = value
 
     @property
@@ -28,8 +28,8 @@ class Manual:
         return self._engine
 
     @engine.setter
-    def set_engine(self, engine: EngineTypes):
-        if engine not in EngineTypes:
+    def engine(self, engine: EngineType):
+        if engine not in EngineType:
             raise ValueError(f"Invalid engine type: '{engine}'")
 
         self._engine = engine
@@ -39,7 +39,7 @@ class Manual:
         return self._seats
 
     @seats.setter
-    def set_seats(self, seats: SeatsMetadata):
+    def seats(self, seats: SeatsMetadata):
         if seats < SeatsMetadata.MIN_COUNT or seats > SeatsMetadata.MAX_COUNT:
             raise ValueError(
                 f"Invalid number of seats: '{seats}'. "
@@ -52,5 +52,5 @@ class Manual:
         return self._trip_computer
 
     @trip_computer.setter
-    def set_trip_computer(self, value: bool):
+    def trip_computer(self, value: bool):
         self._trip_computer = value
