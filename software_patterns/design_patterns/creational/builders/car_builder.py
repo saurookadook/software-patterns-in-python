@@ -1,5 +1,5 @@
-from .constants import EngineType
-from .entities import Builder, Car
+from software_patterns.design_patterns.creational.builders.constants import EngineType
+from software_patterns.design_patterns.creational.builders.entities import Builder, Car
 
 
 class CarBuilder(Builder):

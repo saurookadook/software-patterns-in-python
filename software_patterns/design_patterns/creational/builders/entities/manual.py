@@ -1,4 +1,7 @@
-from ..constants import EngineType, SeatsMetadata
+from software_patterns.design_patterns.creational.builders.constants import (
+    EngineType,
+    SeatsMetadata,
+)
 
 
 class Manual:

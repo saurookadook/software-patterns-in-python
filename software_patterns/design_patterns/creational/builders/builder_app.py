@@ -1,8 +1,16 @@
 from typing import List, Tuple
 
-from .car_builder import CarBuilder
-from .car_manual_builder import CarManualBuilder
-from .entities import Builder, Car, CarConfig, Director, Manual
+from software_patterns.design_patterns.creational.builders.car_builder import CarBuilder
+from software_patterns.design_patterns.creational.builders.car_manual_builder import (
+    CarManualBuilder,
+)
+from software_patterns.design_patterns.creational.builders.entities import (
+    Builder,
+    Car,
+    CarConfig,
+    Director,
+    Manual,
+)
 
 
 class BuilderApp:

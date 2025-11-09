@@ -1,7 +1,7 @@
 import pytest
 
-from ..car_builder import CarBuilder
-from ..constants import EngineType
+from software_patterns.design_patterns.creational.builders import CarBuilder
+from software_patterns.design_patterns.creational.builders.constants import EngineType
 
 
 @pytest.fixture

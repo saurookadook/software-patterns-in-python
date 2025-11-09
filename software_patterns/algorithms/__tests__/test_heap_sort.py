@@ -1,10 +1,7 @@
 import pytest
 from faker import Faker
 
-from ..heap_sort import heap_sort, heap_sort_in_place
-
-
-# fake = Faker()
+from software_patterns.algorithms.heap_sort import heap_sort, heap_sort_in_place
 
 
 @pytest.mark.parametrize(

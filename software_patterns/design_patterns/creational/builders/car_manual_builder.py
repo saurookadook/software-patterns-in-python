@@ -1,5 +1,8 @@
-from .constants import EngineType
-from .entities import Builder, Manual
+from software_patterns.design_patterns.creational.builders.constants import EngineType
+from software_patterns.design_patterns.creational.builders.entities import (
+    Builder,
+    Manual,
+)
 
 
 class CarManualBuilder(Builder):

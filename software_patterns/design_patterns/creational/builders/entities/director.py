@@ -1,5 +1,8 @@
-from ..constants import EngineType, SeatsMetadata
-from .car import CarConfig
+from software_patterns.design_patterns.creational.builders.constants import (
+    EngineType,
+    SeatsMetadata,
+)
+from software_patterns.design_patterns.creational.builders.entities.car import CarConfig
 
 
 class Director:
