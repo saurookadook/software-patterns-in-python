@@ -147,11 +147,11 @@ def builder_app():
 
 @pytest.mark.parametrize(
     "test_case",
-    [tuple(tc) for tc in test_cases],
+    [tuple(v for v in tc.values()) for tc in test_cases],
 )
 def test_builder_app(builder_app, test_case):
     _, configs = test_case
-    builder_app.make_car(configs)
+    builder_app.make_cars(configs)
 
     result_products = builder_app.get_result_products()
 
@@ -160,6 +160,9 @@ def test_builder_app(builder_app, test_case):
     for i, product in enumerate(result_products):
         config = configs[i]
         car, manual = product
+        print(f"    {i=}    ".center(120, "="))
+        print(f"all configs: {configs=}")
+        print(f"{config=} || {car=} || {manual=}")
 
         assert isinstance(car, Car)
         assert isinstance(manual, Manual)

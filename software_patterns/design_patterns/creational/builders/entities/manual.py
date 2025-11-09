@@ -39,13 +39,13 @@ class Manual:
         return self._seats
 
     @seats.setter
-    def seats(self, seats: SeatsMetadata):
+    def seats(self, seats: int):
         if seats < SeatsMetadata.MIN_COUNT or seats > SeatsMetadata.MAX_COUNT:
             raise ValueError(
                 f"Invalid number of seats: '{seats}'. "
                 + f"Must be between {SeatsMetadata.MIN_COUNT} and {SeatsMetadata.MAX_COUNT}."
             )
-        self._seats = seats.value
+        self._seats = seats
 
     @property
     def trip_computer(self):

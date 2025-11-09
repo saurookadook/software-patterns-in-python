@@ -15,7 +15,11 @@ class Director:
     """
 
     def construct_car_from_config(self, builder, config):
-        pass
+        builder.reset()
+        builder.set_engine(config.engine)
+        builder.set_GPS(config.install_GPS)
+        builder.set_seats(config.seats)
+        builder.set_trip_computer(config.install_trip_computer)
 
     def construct_basic_diesel_car(self, builder):
         self.construct_car_from_config(
