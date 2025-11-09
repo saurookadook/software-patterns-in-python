@@ -14,9 +14,18 @@ class ShapePrototype:
 
     def __init__(self, source: Optional[ShapePrototype] = None):
         if source is not None and isinstance(source, ShapePrototype):
-            self.color = source.color
-            self.x = source.x
-            self.y = source.y
+            for key, value in source.__dict__.items():
+                setattr(self, key, value)
+
+    def __eq__(self, other: object) -> bool:
+        if not isinstance(other, self.__class__):
+            return False
+
+        for key, value in other.__dict__.items():
+            if getattr(self, key) != value:
+                return False
+
+        return True
 
     def clone(self) -> ShapePrototype:
         raise ShapePrototype.NotImplemented()
