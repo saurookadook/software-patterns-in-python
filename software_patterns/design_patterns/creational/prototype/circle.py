@@ -11,11 +11,10 @@ class Circle(ShapePrototype):
     def __init__(self, source: Optional[Circle] = None):
         super().__init__(source)
 
-        self.radius = (
-            source.radius
-            if source is not None and isinstance(source, Circle)  # force formatting
-            else 0
-        )
+        if source is not None and isinstance(source, Circle):
+            self.radius = source.radius
+        else:
+            self.radius = 0
 
     def clone(self) -> Circle:
         return Circle(self)
