@@ -5,20 +5,20 @@ from software_patterns.design_patterns.creational.builders.constants import Engi
 
 class Builder:
 
-    class NotImplementedError(Exception):
+    class NotImplemented(NotImplementedError):
         pass
 
     def reset(self) -> None:
-        raise Builder.NotImplementedError()
+        raise Builder.NotImplemented()
 
     def set_seats(self, seats: int) -> None:
-        raise Builder.NotImplementedError()
+        raise Builder.NotImplemented()
 
     def set_engine(self, engine_type: EngineType) -> None:
-        raise Builder.NotImplementedError()
+        raise Builder.NotImplemented()
 
     def set_GPS(self, should_have_GPS: bool) -> None:
-        raise Builder.NotImplementedError()
+        raise Builder.NotImplemented()
 
     def get_product(self) -> Any:
-        raise Builder.NotImplementedError()
+        raise Builder.NotImplemented()
