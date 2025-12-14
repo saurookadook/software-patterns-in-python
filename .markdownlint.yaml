@@ -6,7 +6,7 @@
 # code-block-style: false
 
 emphasis-style:
-  style: asterisk
+  style: underscore
 
 # H1 headings are automatically inserted by mkdocs
 first-line-h1: false
@@ -26,4 +26,4 @@ ul-indent:
   indent: 4
 
 ul-style:
-  style: asterisk
+  style: consistent

@@ -15,3 +15,23 @@ If you would rather install `uv` anothe away, see [their documentation for other
 ```sh
 uv run pytest
 ```
+
+## Notes
+
+- [Class diagrams in Mermaid](https://mermaid.js.org/syntax/classDiagram.html)
+
+<!--
+============= BARS =============
+― ⍽ ⎸ ⎹ ␣ ─ ━ │ ┃
+
+======== SQUARE CORNERS ========
+┌ ┍ ┎ ┏ ┐ ┑ ┒ ┓ └ ┕ ┖ ┗ ┘ ┙ ┚ ┛
+
+======== ROUND CORNERS =========
+╭ ╮ ╯ ╰ ╱ ╲ ╳
+
+========== CONNECTORS ==========
+├ ┝ ┞ ┟ ┠ ┡ ┢ ┣ ┤ ┥ ┦ ┧ ┨ ┩ ┪ ┫
+┬ ┭ ┮ ┯ ┰ ┱ ┲ ┳ ┴ ┵ ┶ ┷ ┸ ┹ ┺ ┻
+┼ ┽ ┾ ┿ ╀ ╁ ╂ ╃ ╄ ╅ ╆ ╇ ╈ ╉ ╊ ╋
+-->
