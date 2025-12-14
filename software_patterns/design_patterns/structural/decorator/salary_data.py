@@ -1,0 +1,5 @@
+salary_records = [
+    {"name": "Alice", "salary": 50000},
+    {"name": "Bob", "salary": 60000},
+    {"name": "Charlie", "salary": 70000},
+]
