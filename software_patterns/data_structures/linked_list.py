@@ -1,3 +1,6 @@
+R_ARROW = "→"
+
+
 class Node:
     def __init__(self, value):
         self.value = value
@@ -55,3 +58,26 @@ class LinkedList:
         prev.next = temp.next  # type: ignore
         temp = None  # NOTE: I believe this is to help the garbage collector
         return True
+
+    def show(self) -> str:
+        current_node = self.head
+        linked_list_str = ""
+
+        while current_node is not None and current_node.value is not None:
+            linked_list_str += f"{str(current_node.value)} {R_ARROW} "
+            current_node = current_node.value
+
+        linked_list_str += "None"
+        return linked_list_str
+
+    def show_using_array(self) -> str:
+        current_node = self.head
+        linked_list_data = []
+
+        while current_node is not None and current_node.value is not None:
+            linked_list_data.append(str(current_node.value))
+            current_node = current_node.next
+
+        linked_list_data.append("None")
+
+        return f" {R_ARROW} ".join(linked_list_data)
