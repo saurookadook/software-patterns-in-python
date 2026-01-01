@@ -2,5 +2,8 @@
     "editor.tabSize": 4,
     "python.analysis.extraPaths": [
         ".venv/lib/python3.12/site-packages"
-    ]
+    ],
+    "[markdown]": {
+        "editor.tabSize": 4
+    }
 }
