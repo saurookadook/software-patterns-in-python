@@ -2,12 +2,13 @@
 
 [_Refactoring Guru: Decorator_](https://refactoring.guru/design-patterns/decorator)
 
+_Also known as: **Wrapper**_
+
 - a structural design pattern
 - allows for attaching new behaviors to objects by placing them inside special wrapper object that contains behaviors
 
 ## The Pattern
 
-- also referred to as **Wrapper**
 - object that can be linked with some _target_ object
 - contains same set of methods as target and delegates to it all requests it receives
 - may alter result by doing something either before or after it pass request to target

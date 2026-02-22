@@ -2,10 +2,14 @@
 
 [_Refactoring Guru: Memento_](https://refactoring.guru/design-patterns/memento)
 
-## The Pattern
+_Also known as: **Snapshot**_
 
 - a behavioral design pattern
 - allows for saving and restoring previous state of an object without revealing details of its implementation
+
+## The Pattern
+
+🚧 _TODO_ 🚧
 
 ## Structure
 

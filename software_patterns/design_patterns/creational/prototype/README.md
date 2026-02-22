@@ -1,6 +1,9 @@
 # Prototype
 
-Also known as 'clone', **prototype** is a creational design pattern that lets you copy existing objects without making code dependent on their classes.
+_Also known as: **Clone**_
+
+- a creational design pattern
+- lets you copy existing objects without making code dependent on their classes
 
 ## Basic Implementation
 

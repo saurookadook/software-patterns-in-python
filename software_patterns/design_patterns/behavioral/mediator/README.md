@@ -2,6 +2,8 @@
 
 [_Refactoring Guru: Mediator_](https://refactoring.guru/design-patterns/mediator)
 
+**Also known as**: Intermediary, Controller
+
 - a behavioral design pattern
 - helps reduce chaotic dependencies between objects by restricting direct communications between objects and forcing them to collaborate only via a **Mediator** object
 

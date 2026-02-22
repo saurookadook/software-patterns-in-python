@@ -2,6 +2,8 @@
 
 [_Refactoring Guru: Flyweight_](https://refactoring.guru/design-patterns/flyweight)
 
+_Also known as: **Cache**_
+
 - a structural design pattern
 - allows for fitting more objects into available amount of RAM by sharing common parts of state between multiple objects instead of keeping all data in each object
 
