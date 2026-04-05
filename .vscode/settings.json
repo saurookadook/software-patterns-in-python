@@ -3,7 +3,10 @@
     "python.analysis.extraPaths": [
         ".venv/lib/python3.12/site-packages"
     ],
+    "python.analysis.typeCheckingMode": "standard",
     "[markdown]": {
         "editor.tabSize": 4
-    }
+    },
+    "python-envs.defaultEnvManager": "ms-python.python:system",
+    "python-envs.pythonProjects": []
 }
